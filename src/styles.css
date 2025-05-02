@@ -1,0 +1,515 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  background: #000000;
+  color: white;
+  font-family: 'Lilita One', sans-serif;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  text-shadow: -2px 2px black, 0 1px black, 1px 0 black, 0 -1px black;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-family: 'Lilita One', 'Sans-Serif';
+}
+
+/* // button style */
+.btn {
+  position: relative;
+  cursor: pointer;
+  width: 58px;
+  height: 33px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  /* font-family: "Nougat", sans-serif; */
+  font-size: 12px;
+  color: white;
+  background: linear-gradient(180deg, #343c50 63%, #38545f 100%);
+  transition: 0.4s;
+  box-shadow: 0px 4px 0 #00000047;
+  transform: skewX(-9deg);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  border-radius: 5px;
+  border: 1px solid #050E25;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 200;
+    background-color: #5A5371;
+    height: 3px;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 200;
+    background-color: #252C3C;
+    height: 3px;
+  }
+
+  &:active {
+    transform: scale(0.9) skewX(-9deg);
+  }
+
+  &.top-btn {
+    width: 74px !important;
+    height: 50px !important;
+  }
+
+  &.top-btn-2 {
+    width: 116px !important;
+    height: 50px !important;
+    margin-left: 9px;
+  }
+
+  &.game-mode-btn {
+    height: 46px;
+  }
+
+  &.game-mode-btn,
+  &.btn-yellow-bottom &.btn-red-bottom {
+    border: 1.5px solid black;
+    width: 100%;
+  }
+
+  &.bottom-left-btn {
+    width: 186px;
+    height: 51px !important;
+  }
+
+  &.btn-yellow-bottom,
+  &.bottom-left-btn {
+    background: #EEC308;
+    height: 58px;
+    font-size: 22px;
+
+    &:before {
+      background-color: #FBEF43;
+      height: 4px;
+    }
+
+    &:after {
+      background-color: #A5532D;
+      height: 4px;
+    }
+  }
+
+  &.btn-red-bottom {
+    background: #E5301F;
+    height: 58px;
+    font-size: 22px;
+
+    &:before {
+      background-color: #FF7A7B;
+      height: 4px;
+    }
+
+    &:after {
+      background-color: #cc0036;
+      height: 4px;
+    }
+  }
+}
+
+.add-search {
+  background: linear-gradient(0deg, #ffffff61 0%, #fbfbfb1f 100%) !important;
+  border: 1px solid white !important;
+  transform: skewX(-9deg);
+  padding: 0px 10px;
+
+  &:before,
+  &:after {
+    background-color: transparent !important;
+  }
+}
+
+.global-badge {
+  position: relative;
+  float: right;
+  display: flex;
+  margin-right: -8px;
+  margin-top: -2px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 26px;
+  height: 26px;
+  font-size: 22px;
+  border-radius: 50%;
+  border: 1px solid black;
+  box-shadow: 0px 3px 0 #00000070;
+
+  .inner-badge-text {
+    position: relative;
+  }
+}
+
+.global-badge:before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 2px;
+}
+
+.blue-badge {
+  background-color: #1797fb;
+  color: white !important;
+
+  &:before {
+    background-color: #1f67fe;
+  }
+}
+
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: none;
+  }
+
+  20% {
+    box-shadow: 0 0 80px 125px rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+
+  80% {
+    box-shadow: none;
+  }
+}
+
+.pulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  animation: pulseGlow 3s ease-in-out 0s infinite;
+}
+
+.bg-contact {
+  background: url("/public/img/wallpaper-2.jpg") no-repeat;
+  background-size: cover;
+}
+
+.character-main-container {
+  box-shadow: 0px 0px 15px 3px #00000047;
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  height: 100%;
+  top: 50%;
+  background-image: url('https://github.com/raharisonAina/BrawlStars/blob/main/assets/main-bg.png?raw=true');
+  background-size: cover;
+  transform: translate(-50%, -50%);
+}
+
+.bg-character {
+  height: 100%;
+  background: url('https://github.com/raharisonAina/BrawlStars/blob/main/assets/bg-pattern-on-green.png?raw=true') repeat;
+  animation: animate 15s linear infinite;
+}
+
+@keyframes animate {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 0 -128px;
+  }
+}
+
+.bg-resume {
+  background: url("/public/img/wallpaper-3.jpeg") no-repeat;
+  background-size: cover;
+}
+
+.bg-project {
+  background: url("/public/img/wallpaper-1.webp") no-repeat;
+  background-size: cover;
+}
+
+.contact-div {
+  background-color: #9c3ff3;
+  width: 70%;
+  padding: 1em 2em;
+  transform: skewX(-9deg);
+  margin: 0em 4em 3em 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid black;
+  box-shadow: 0px 4px 0 #00000047;
+}
+
+.title-p {
+  background-color: #1a35bb8e;
+  border: 1px solid #00000047;
+}
+
+.project-div {
+  height: 80vh;
+  transform: skewX(-9deg);
+  background-color: #1240be5b;
+  border: 1px solid #00000047;
+
+  &:before {
+    background-color: #FBEF43;
+    height: 4px;
+  }
+
+  &:after {
+    background-color: #A5532D;
+    height: 4px;
+  }
+}
+
+.two-project-div {
+  box-shadow: 0px 4px 0 #00000047;
+  height: 32vh;
+  border: 2px solid black;
+}
+
+.single-project-div {
+  box-shadow: 0px 4px 0 #00000047;
+  height: 68vh;
+  border: 2px solid black;
+}
+
+.p-gray {
+  color: #767f99;
+  background-color: black;
+  text-align: end;
+  padding: 0 25px;
+}
+
+.logo-image {
+  width: 80px;
+  height: 80px;
+  padding: 10px;
+}
+
+.bg-1 {
+  background-color: #81d621;
+}
+
+.bg-2 {
+  background-color: #8ca0df;
+}
+
+.bg-3 {
+  background-color: #9b3df3;
+}
+
+.bg-4 {
+  background-color: #fd0053;
+}
+
+.bg-5 {
+  background-color: #e33c50;
+}
+
+.bg-6 {
+  background-color: #f7831c;
+}
+
+.border-div {
+  border-bottom: 2px solid black;
+  box-shadow: 0px 4px 0 #00000047;
+}
+
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+  /* Safari and Chrome */
+}
+
+.project-footer {
+  position: absolute;
+  bottom: 0;
+  background-color: #052453;
+  color: #b3b9c3;
+}
+
+.project-footer-current {
+  color: #f3c448;
+}
+
+.back-btn {
+  position: absolute;
+  top: -5px;
+  left: -10px;
+  margin: 0;
+  height: 60px;
+  width: 80px;
+}
+
+.back-btn:hover {
+  cursor: pointer;
+}
+
+.btn-blue {
+  background: #7bd7ff !important;
+  border-bottom: 4px solid #53bbe8;
+  border-top: 4px solid #b3e7fe;
+  box-shadow: 2px solid #040404;
+}
+
+.btn-disabled {
+  background: #4f4d5b !important;
+  border-top: 4px solid #676478;
+  border-bottom: 4px solid #3b3a49;
+  box-shadow: 2px solid #040404;
+}
+
+.btn-blue::before {
+  background-color: transparent;
+}
+
+.btn-blue::after {
+  background-color: transparent;
+}
+
+.btn-disabled::before {
+  background-color: transparent;
+}
+
+.btn-disabled::after {
+  background-color: transparent;
+}
+
+.resume-docs {
+  width: 50vw;
+  height: 80vh;
+}
+
+iframe::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 201;
+}
+
+.box-shadow-div {
+  box-shadow: 2px solid #040404;
+}
+
+.box-shadow-blue-after {
+  border-bottom: 4px solid #035cb4;
+}
+
+.border-bottom-light-blue {
+  border-bottom: 8px solid #248ef4;
+}
+
+.border-black-small {
+  border-bottom: 1px solid black;
+}
+
+.border-blue-thick {
+  border: 5px solid #0f4cbd;
+}
+
+.bg-ham {
+  background: linear-gradient(180deg, #343c50 63%, #38545f 100%);
+  border-radius: 5px;
+}
+
+.bg-menu {
+  background: linear-gradient(180deg, #343c50 63%, #38545f 100%);
+}
+
+.btn-responsive {
+  width: 150px;
+  font-size: 20px;
+  height: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .btn-responsive {
+    width: 80px;
+    font-size: 10px;
+    height: 30px;
+  }
+
+  .resume-docs {
+    width: 90vw;
+    height: 80vh;
+  }
+
+  .logo-image {
+    padding: 2px;
+  }
+}
+
+.bg-toast {
+  background-color: #248df6;
+}
+
+.toast-title {
+  color: #a8daf8;
+}
+
+.toast-message {
+  color: white;
+}
+
+.Toastify__toast-container {
+  margin: 0px;
+}
+
+.bg-about {
+  /* background: url('/public/img/header.png'); */
+  background: url('/public/img/wallpaper-7.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
