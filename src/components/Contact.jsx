@@ -10,6 +10,8 @@ import { toast } from 'react-toastify';
 import CustomToast from './CustomToast';
 import Leon from './characters/Leon';
 import { useCharacterContext } from '../context/charcter.context';
+import emailjs from '@emailjs/browser';
+
 
 let initialValues = {
   name: "",
@@ -45,11 +47,25 @@ const Contact = () => {
     validationSchema: contactValidationSchema,
     onSubmit: async (values, action) => {
       setLoading(true);
-      const response = await axios.post(`https://mailserver-3mwc.onrender.com/api/mail-server/send-mail`, { ...values, backendEmail: 'manavshah0407@gmail.com' }, { headers: { "Content-Type": "application/json" } });
-      toast(<CustomToast message={response.data.message} />, { limit: 1 })
+      try {
+        await emailjs.send(
+          'service_m2yf39j',
+          'template_weuy9e8',
+          {
+            from_name: values.name,
+            from_email: values.email,
+            message: values.message,
+          },
+          'kLFX4_RKQny4DQzqY'
+        );
+        toast(<CustomToast message="Message sent successfully!" />, { limit: 1 });
+        action.resetForm();
+      } catch (error) {
+        toast(<CustomToast message="Failed to send message." message2="Please try again later." />, { limit: 1 });
+      }
       setLoading(false);
-      action.resetForm();
     }
+    
   })
 
   const goHome = () => {

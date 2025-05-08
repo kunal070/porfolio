@@ -48,32 +48,25 @@ const About = () => {
           <div className="flex flex-col w-full xl:w-2/5 justify-center lg:items-start px-8 lg:pl-16 lg:pr-0 text-justify">
             {/* <h2 className='text-2xl text-[#FF7A7B]'> Lorem ipsum dolor sit amet consectetur adipisicing elit. Non molestiae dicta voluptatem aliquam nesciunt pariatur? </h2> */}
             <div className='bg-gray-900 w-full shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4'>
-              <h2 className='text-2xl text-[#EEC308] text-center w-full'> "Man is a product of its environment" </h2>
+              <h2 className='text-2xl text-[#EEC308] text-center w-full'> "More than syntax — it’s storytelling." </h2>
             </div>
             <p className='mt-4 text-white'>
-              Once upon a time, in the pixelated landscapes of GTA Vice City and the adrenaline-fueled streets of NFS Most Wanted,
-              a young mind was captivated by the magic of gaming.
-
-              Little did I know that those immersive experiences would spark a flame of curiosity within me, igniting a passion for the world of coding.
-              Fast forward to today, and at the age of 20, I find myself on a journey of exploration after earning my BVM degree.
-
-
+              My journey into tech started in the vibrant chaos of GTA San Andreas and NFS Most Wanted. What began as a love for gaming slowly turned into curiosity about how digital worlds are built. That spark led me to pursue Information Technology at BVM and later expand my horizons through Applied Computing at the University of Windsor.
             </p>
+
             <p className='my-4 text-white'>
-              In the realms of literature, "The 5 People You Meet in Heaven" by Mitch Albom has become my cherished companion.
-              This profound book has taught me to trust the process, to embrace the journey with open arms, and find meaning in every step forward.
+              Now, at 22, I’m driven by more than just code — I’m drawn to the why behind what we build. From systems that automate tasks to interfaces that shape how people interact, I see technology as both a creative outlet and a problem-solving toolkit. Windsor helped me connect logic with purpose.
             </p>
 
-            <p className='mb-4 text-white'>            Each line of code is a stroke of art, a manifestation of the ideas that once bloomed during those gaming sessions.
-              This journey is not just about lines of code but about embracing the unknown, trusting the process, and constantly evolving.
-
+            <p className='mb-4 text-white'>            
+              One book that continues to shape my perspective is “The 5 People You Meet in Heaven” by Mitch Albom. It reminded me that progress is rarely linear — that every challenge, every pivot has its purpose. My journey with code is much the same: not just about building systems, but about trusting the process, staying curious, and evolving with every step forward.
             </p>
 
             <h2 className='text-xl text-[#7bd7ff] text-center w-full bg-gray-900 rounded-md px-8 pt-6 pb-8 mb-4'>"Win Everyday"</h2>
           </div>
 
           <div className="w-full xl:w-3/5 p-12">
-            <img className="mx-auto w-3/5 md:w-3/5 rounded-full shadow-[0_10px_20px_rgba(240,_46,_170,_0.7)]" placeholder='manav-shah' src="/img/manav-shah-3.jpg" />
+            <img className="mx-auto w-3/5 md:w-3/5 rounded-full shadow-[0_10px_20px_rgba(240,_46,_170,_0.7)]" placeholder='manav-shah' src="/img/Kunal_image.jpg" />
           </div>
         </div>
       </div>

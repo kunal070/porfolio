@@ -117,8 +117,8 @@ const Home = () => {
                                         </>
                                         :
                                         <>
-                                            <p className='text-xl'> Hello, I am Manav Shah,</p>
-                                            <p className='text-xl'> MERN stack developer. </p>
+                                            <p className='text-xl'> Hello, I am Kunal Panchal,</p>
+                                            <p className='text-xl'> Data-Driven Developer | ML & Backend Systems </p>
                                             {
                                                 isMobileDevice ? null : <p className='text-xl'> Click Mouse to Move around. </p>
                                             }

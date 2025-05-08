@@ -1,59 +1,37 @@
 import React, { useEffect, useState } from 'react'
 
 const modalData = {
-    "bosleo": {
-        logo: "/img/logos/bosleo.png",
-        title1: "BOSLEO TECHNOLOGY",
-        title2: "DEVELOPER TRAINEE",
-        title3: "JR ANGULAR DEVELOPER",
-        para1: "I'm an JR Angular Developer at Bosleo Technology, honing my skills and contributing to innovative projects.",
-        para2: "Bosleo Technology specializes in technology solutions for the healthcare domain, transforming ideas into impactful digital solutions.",
-        link: "https://bosleo.com",
-        image: "/img/angular.jpg",
-        header: "EXPERIANCE"
-    },
-    "megh-technologies-2": {
+    "megh-technologies": {
         logo: "/img/logos/megh.png",
         title1: "MEGH TECHNOLOGIES",
         title2: "IDP Project for ERDA",
-        title3: "MERN Stack Developer",
+        title3: " MERN Intern",
         para1: "At Megh Technologies, I contributed to the Membership Management project, showcasing my expertise in project development.",
         para2: "Proficient in both Backend and Frontend, I played a versatile role at Megh Technologies.",
         link: "https://membership-management.netlify.app",
         image: "/img/membership-management.png",
         header: "INTERNSHIP"
     },
-    "megh-technologies-1": {
-        logo: "/img/logos/megh.png",
-        title1: "MEGH TECHNOLOGIES",
-        title2: "Due Diligence",
-        title3: "MERN Stack Developer",
-        para1: "The Due Diligence project, an internal tool, enhances precise project selection at the firm.",
-        para2: "Gained expertise in session management with React, Redux, Express-session, and OAuth during this valuable experience.",
-        link: "https://megh-technologies-due-deligence.netlify.app",
-        image: "/img/due-diligence.png",
+    "L-T": {
+        logo: "/img/logos/L&T1.png",
+        title1: "L&T Energy Hydrocarbon",
+        title2: "Video Analytics",
+        title3: "Automation and Data Intern",
+        para1: "At L&T Energy Hydrocarbon, I deployed a Flask-based system to automate video analytics and streamline data processing workflows.",
+        para2: "Using YOLO for object detection, I processed video data and built Power BI dashboards to display model results and performance trends.",
+        link: "https://membership-management.netlify.app",
+        image: "/img/membership-management.png",
         header: "INTERNSHIP"
     },
-    "bdc": {
-        logo: "/img/logos/bvm.png",
-        title1: "BVM DEVELOPER CLUB",
-        title2: "Internal College web-apps",
-        title3: "MERN Stack Developer",
-        para1: "Managed a ticket system for Udaan, the annual tech festival, accommodating 5200+ participants seamlessly.",
-        para2: "Implemented a red-carpet voting system for Udaan, facilitating the engagement of 1000+ voters effortlessly.",
-        link: "https://timely-kitten-7d0929.netlify.app",
-        image: "/img/bdc.png",
-        header: "INTERNSHIP"
-    },
-    "vnc": {
-        logo: "/img/logos/vnc.png",
-        title1: "VNC NGO",
-        title2: "Tech Team Member",
-        title3: "REACT Developer",
-        para1: "Crafted the Croc-Watch website using React and Firebase, ensuring a dynamic and responsive user experience.",
-        para2: "Integrated Google Maps API to highlight and showcase crocodile sites, deployed on GitHub Pages.",
-        link: "https://app.crocodilecount.org",
-        image: "/img/vnc.png",
+    "L-T-2": {
+        logo: "/img/logos/L&T1.png",
+        title1: "L&T Energy Hydrocarbon",
+        title2: "FSR System",
+        title3: "Software Intern",
+        para1: "At L&T Engineering, I developed a web-based Supplier Supervision System using PHP and JavaScript to improve field activity tracking.",
+        para2: "The application streamlined reporting, enabled real-time updates, and enhanced communication between suppliers and engineers.",
+        link: "https://membership-management.netlify.app",
+        image: "/img/fsr.png",
         header: "INTERNSHIP"
     },
     "portfolio": {
@@ -67,39 +45,39 @@ const modalData = {
         image: "/img/portfolio.png",
         header: "PROJECT"
     },
-    "vatsalya-bakers": {
-        logo: "/img/logos/v-b (1).jpg",
-        title1: "VATSALYA BAKERS",
-        title2: "Bakery Website",
-        title3: "Deployed using AWS S3",
-        para1: "Crafted a personalized bakery website with a touch of creativity through custom CSS.",
-        para2: "Implemented a custom GitLab CI/CD pipeline integrated with AWS S3 for efficient and seamless deployment.",
+    "linux": {
+        logo: "/img/logos/linux.png",
+        title1: "File System",
+        title2: "Distributed Linux Storage",
+        title3: "C & Socket Programming",
+        para1: "Led development of a distributed file system enabling organized storage across four simulated Linux servers.",
+        para2: "Used socket programming for server communication and managed sprints to ensure on-time, modular delivery.",
+        link: "https://app.crocodilecount.org",
+        image: "/img/portfolio.png",
+        header: "PROJECT"
+    },
+    "Student": {
+        logo: "/img/logos/ml.png",
+        title1: "Performance Predictor",
+        title2: "Academic Risk Prediction System",
+        title3: "Developed using Python",
+        para1: "Developed a Python-based system to predict academic risk using models like Random Forest, SVR, and LSTM.",
+        para2: "Visualized grade distributions and model results through Power BI and Matplotlib for early intervention insights.",
         link: "http://vatsalya-bakers.s3-website-us-east-1.amazonaws.com",
-        image: "/img/vatsalya-bakers.png",
+        image: "/img/Student.png",
         header: "PROJECT"
     },
-    "sheet-management": {
-        logo: "/img/logos/beast-adamant.jpg",
-        title1: "SHEET MANAGEMENT",
-        title2: "Inventory Management",
-        title3: "Made with express & ejs",
-        para1: "Tailored an inventory management system with search and Excel sheet generation capabilities for enhanced functionality.",
-        para2: "Utilized Express for the backend, EJS for the frontend, and Bootstrap for a user-friendly and responsive UI.",
+    "Plan": {
+        logo: "/img/logos/plan.png",
+       "title1": "Price Intelligence",
+       "title2": "Streaming Plan Recommender",
+       "title3": "Java, Spring Boot & React",
+       "para1": "Built a backend service with Java and Spring Boot to store and query streaming plan data using MySQL.",
+       "para2": "Automated web scraping with Selenium and developed REST APIs for real-time price comparisons.",
         link: "https://github.com/manavshah47/old-SHEET-MANAGMENT-",
-        image: "/img/sheet-management.png",
+        image: "/img/streaming.jpg",
         header: "PROJECT"
     },
-    "ashish-corporation": {
-        logo: "/img/logos/ashish-corporation.jpg",
-        title1: "ASHISH CORPORATION",
-        title2: "Custom Made Website.",
-        title3: "Made with html & css",
-        para1: "Designed and developed the web presence for ASHISH CORPORATION, incorporating self-created web pages.",
-        para2: "An introductory project in web development, providing valuable experience in the web domain.",
-        link: "https://ashish-corporation.netlify.app/",
-        image: "/img/ashish-corporation.png",
-        header: "PROJECT"
-    }
 }
 
 

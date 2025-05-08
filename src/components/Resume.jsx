@@ -49,10 +49,9 @@ const Resume = () => {
             </div>
           </div>
         </div>
-        <iframe
-          src="https://docs.google.com/document/d/e/2PACX-1vSxyo0TjyGs5yPESJVazzNHQjPwTnpV7wVBrXe4jMdflQhkXdpCUOtszq59hfbx7MHozR97wTC1SaXf/pub?embedded=true"
-          className='resume-docs'
-        />
+        <iframe src="https://drive.google.com/file/d/1pM_w6c6WSl3LbXzZ0XESZoURyxPT1j5U/preview" width="75%" height="645" allow="autoplay"></iframe>
+
+
       </div>
     </>
   )
